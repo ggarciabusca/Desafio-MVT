@@ -18,3 +18,4 @@ Desafio MVT de Gonzalo Garcia
 
 4. Los familiares se deben ver desde la web.
     la lista de familiares se puede ver desde la url "app1/familiares.html"
+    y tiene una página de inicio "app1/inicio.html" donde expongo la consigna
