@@ -1,8 +1,14 @@
 from django.http import HttpResponse
 from django.template import Template, Context, loader
 from app1.models import Persona
+from django.shortcuts import render
 #from django.shortcuts import render
 # Create your views here.
+
+def inicio(request):
+
+    return render(request,"app1/inicio.html")
+
 
 def listado_familiares(request): #función que devuelve el listado de familiares
     
@@ -41,4 +47,3 @@ def listado_familiares(request): #función que devuelve el listado de familiares
 
 #    return HttpResponse(cadena_respuesta)
 
-#<a href="{% url 'coder-inicio'%}"> Ir a inicio </a>
