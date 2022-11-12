@@ -2,6 +2,8 @@ from django.http import HttpResponse
 from django.template import Template, Context, loader
 from app1.models import Persona
 from django.shortcuts import render
+import os
+
 #from django.shortcuts import render
 # Create your views here.
 
@@ -15,8 +17,9 @@ def listado_familiares(request): #función que devuelve el listado de familiares
     #leo todos los datos de la tabla app1-persona
     #esto es una lista de instancias de la clase "Persona" en la base de datos
     personas = Persona.objects.all() 
-
-    archivo = open(r"E:\Gonzalo\Python\Desafio\desafio_mvt\app1\templates\app1\listado_personas.html")
+    ruta = os.path.abspath(os.path.curdir)
+    ruta_completa = ruta + r"\app1\templates\app1\listado_personas.html"
+    archivo = open(ruta_completa)
     plantilla = Template(archivo.read())
     archivo.close
 
